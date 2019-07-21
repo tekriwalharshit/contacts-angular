@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="ContactManager">
+  <head>
+    <title>Contact Manager</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body ng-controller="cmanagerCtrl">
+    <div id="wrapper">
+      <header>
+        <h1>Contact Manager</h1>
+        <nav>
+          <ul>
+            <li><a href="/app">App</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="list">
+          <div class="row head">
+            <div class="col id">#</div>
+            <div class="col name">Name</div>
+            <div class="col phone">Phone</div>
+            <div class="col email">Email</div>
+            <div class="col del">Delete</div>
+          </div>
+          <div class="row" ng-repeat="item in list">
+            <div class="col id">{{item.id}}.</div>
+            <div class="col name">
+              <input type="text" value="{{item.name}}">
+            </div>
+            <div class="col phone">
+              <input type="phone" value="{{item.phone}}">
+            </div>
+            <div class="col email"><a href="mailto:{{item.email}}">{{item.email}}</a></div>
+            <div class="col del" ng-click="delItem(item)">
+              <button>del</button>
+            </div>
+          </div>
+        </div>
+        <div class="count">Total count of contacts:  <b>{{list.length}}</b></div>
+        <form name="addForm">
+          <p>Add new contact:</p>
+          <div>
+            <input ng-model="item.name" name="name" placeholder="Name">
+            <div class="success" ng-show="addForm.name.$dirty">Valid</div>
+            <div class="error" ng-show="addForm.name.$pristine">*</div>
+          </div>
+          <div>
+            <input ng-model="item.phone" name="phone" placeholder="Phone">
+            <div class="success" ng-show="addForm.phone.$dirty">Valid </div>
+            <div class="error" ng-show="addForm.phone.$pristine">*</div>
+          </div>
+          <div>
+            <input ng-model="item.email" name="email" placeholder="E-mail">
+            <div class="success" ng-show="addForm.email.$dirty">Valid</div>
+            <div class="error" ng-show="addForm.email.$pristine">*</div>
+          </div>
+          <button ng-click="addItem()">Add</button>
+        </form>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

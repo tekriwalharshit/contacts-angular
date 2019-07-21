@@ -1,0 +1,157 @@
+@import "compass/css3";
+ body {
+	 font: 14px Arial;
+	 background: #efefef;
+}
+ a {
+	 color: #007b76;
+}
+ b {
+	 font-weight: bold;
+}
+ #wrapper {
+	 width: 1000px;
+	 margin: auto;
+}
+ header h1 {
+	 font-size: 30px;
+	 text-align: center;
+	 margin: 15px 0;
+}
+ header nav {
+	 display: block;
+	 margin: 0 0 5px 0;
+}
+ header nav li {
+	 display: inline-block;
+	 margin: 0 2px 0 0;
+}
+ header nav li a {
+	 font-size: 16px;
+	 color: #fff;
+	 padding: 5px 15px;
+	 background: #333;
+	 text-decoration: none;
+	 box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -o-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -moz-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+}
+ header nav li a:hover {
+	 opacity: 0.8;
+}
+ header nav li a:active {
+	 opacity: 1;
+}
+ main {
+	 padding: 20px;
+	 background: #fff;
+	 min-height: 300px;
+	 position: relative;
+	 z-index: 10;
+	 box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -o-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -moz-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+}
+ main .list {
+	 margin: 20px 0;
+}
+ main .list .row {
+	 width: 100%;
+	 border-bottom: 1px solid #999;
+	 padding: 10px 0;
+}
+ main .list .row.head {
+	 background: #333;
+	 box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -o-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -moz-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+}
+ main .list .row.head .col {
+	 color: #fff;
+}
+ main .list .row .col {
+	 display: inline-block;
+	 vertical-align: middle;
+}
+ main .list .row .col input {
+	 border: none;
+	 font-size: 14px;
+}
+ main .list .row .col.id {
+	 width: 10%;
+	 text-align: center;
+}
+ main .list .row .col.name {
+	 width: 25%;
+}
+ main .list .row .col.phone {
+	 width: 25%;
+}
+ main .list .row .col.email {
+	 width: 25%;
+}
+ main .list .row .col.del {
+	 width: 10%;
+}
+ main .list .row .col.del button {
+	 background: #ff8383;
+	 border: none;
+	 cursor: pointer;
+	 border-radius: 3px;
+	 -o-border-radius: 3px;
+	 -moz-border-radius: 3px;
+	 -webkit-border-radius: 3px;
+	 box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -o-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -moz-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	 -webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+}
+ main .list .row .col.del button:hover {
+	 opacity: 0.8;
+}
+ main .count {
+	 text-align: right;
+}
+ main form p {
+	 font-size: 14px;
+	 margin: 0 0 10px 0;
+}
+ main form input {
+	 display: inline-block;
+	 width: 200px;
+	 height: 30px;
+	 border: 1px solid #999;
+	 padding: 0 10px;
+	 margin: 0 5px 10px 0;
+	 font-size: 16px;
+}
+ main form button {
+	 width: 100px;
+	 height: 32px;
+	 border: none;
+	 background: #007b76;
+	 color: #fff;
+	 font-size: 14px;
+	 cursor: pointer;
+}
+ main form button:hover {
+	 opacity: 0.8;
+}
+ main form button:active {
+	 opacity: 1;
+}
+ main form div .error {
+	 color: #ff8383;
+	 display: inline;
+}
+ main form div .success {
+	 color: green;
+	 display: inline;
+}
+ footer {
+	 min-height: 100px;
+}
+ 
