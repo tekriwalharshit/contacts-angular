@@ -49,14 +49,14 @@
             <div class="error" ng-show="addForm.name.$pristine">*</div>
           </div>
           <div>
-            <input ng-model="item.phone" name="phone" placeholder="Phone">
-            <div class="success" ng-show="addForm.phone.$dirty">Valid </div>
+            <input ng-model="item.phone" name="phone" placeholder="Phone" ng-pattern="/^[0-9]{10,10}$/">
             <div class="error" ng-show="addForm.phone.$pristine">*</div>
+            <div class="error" ng-show="addForm.phone.$error.pattern&&addForm.phone.$dirty">Invalid</div>
           </div>
           <div>
-            <input ng-model="item.email" name="email" placeholder="E-mail">
-            <div class="success" ng-show="addForm.email.$dirty">Valid</div>
+            <input ng-model="item.email" name="email" placeholder="E-mail" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/">
             <div class="error" ng-show="addForm.email.$pristine">*</div>
+            <div class="error" ng-show="addForm.email.$error.pattern&&addForm.email.$dirty">Invalid</div>
           </div>
           <button ng-click="addItem()">Add</button>
         </form>
